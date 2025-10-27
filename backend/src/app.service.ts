@@ -15,16 +15,16 @@ export class Operaciones{
   }
 
   sumarNumeros(): number{
-    let total = 0;
-    for(let numero of this.numeros){
-      total += numero;
+    let total = this.numeros[0];
+    for(let i = 1; i<this.numeros.length; i++){
+      total += this.numeros[i];
     }
     return total;
   }
 
   restarNumeros(): number{
     let total = this.numeros[0];
-    for(let i = 1; i<this.numeros.length-1; i++){
+    for(let i = 1; i<this.numeros.length; i++){
       total -= this.numeros[i];
     }
     return total;
@@ -32,15 +32,17 @@ export class Operaciones{
 
   multiplicarNumeros(): number{
     let total = this.numeros[0];
-    for(let i = this.numeros[1]; i<this.numeros.length-1; i++){
-      total = total * i;
+    for(let i = 1; i<this.numeros.length; i++){
+      total = total * this.numeros[i];
     }
     return total;
   }
 
   dividirNumeros(): number{
     let total = this.numeros[0]
-    
+    for(let i = 1; i < this.numeros.length; i++){
+      total = total / this.numeros[i];
+    }
     return total;
   }
 }
