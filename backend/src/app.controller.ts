@@ -15,9 +15,9 @@ export class AppController {
     const { numeros } = body;
     const instancia = new Operaciones(numeros);
 
-    if(operacion === 'suma'){ return instancia.sumarNumeros()}
-    else if (operacion === 'resta'){ return instancia.restarNumeros()}
+    if(operacion === 'sumar'){ return instancia.sumarNumeros()}
+    else if (operacion === 'restar'){ return instancia.restarNumeros()}
     else if (operacion === 'multiplicar') { return instancia.multiplicarNumeros()}
-    else if (operacion === 'division') { return instancia.dividirNumeros()}
+    else if (operacion === 'dividir') { return instancia.dividirNumeros()}
   }
 }
