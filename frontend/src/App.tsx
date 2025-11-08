@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState } from 'react';
+import Pantalla from './componentes/pantalla';
 import logo from './logo.svg';
 import './App.css';
 
