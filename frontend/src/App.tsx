@@ -1,25 +1,23 @@
 import { useState } from 'react';
 import Pantalla from './componentes/pantalla';
-import logo from './logo.svg';
+import Teclado from './componentes/teclado';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+  const [input, setInput] = useState('');
+  const [operacion, setOperacion] = useState('');
+  const [resultado, setResultado] = useState<number | null>(null);
+
+  return(
+    <div className='app'>
+      <Pantalla input={input} resultado={resultado} />
+      <Teclado
+        input={input}
+        setInput={setInput}
+        operacion={operacion}
+        setOperacion={setOperacion}
+        setResultado={setResultado}
+        />
     </div>
   );
 }
