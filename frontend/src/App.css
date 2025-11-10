@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.app{
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #6a466a ;
+  border-radius: 15px;
+  border-radius: 10px;
+  color: #f0f0f0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 5);
+  color: #fff ;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #2a1f2f;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pantalla{
+  min-height: 45px;
+  background: #24042b  ;
+  padding: 20px;
+  font-size: 2em;
+  text-align: right;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  color: #f0f0f0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.teclado{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.boton{
+  padding: 20px;
+  font-size: 1.4em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background: #c4c4c4 ;
+  color: #341434 ;
+  transition: trasnform 0.1s ease;
+}
+
+.boton.hover{
+  transform: scale(1.05);
+}
+
+.boton.operacion{
+  background: #6b5bbb ;
   color: white;
 }
- 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.boton.especial{
+  background: #6b5bbb ;
 }
